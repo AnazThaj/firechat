@@ -16,17 +16,19 @@ function Chat() {
   return (
     <div>
       <SignOut />
-      {messages.map(({ id, text, photoURL, uid }) => (
-        <div
-          key={id}
-          className={
-            "msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}"
-          }
-        >
-          <img src={photoURL} />
-          <p>{text}</p>
-        </div>
-      ))}
+      <div className="msgs">
+        {messages.map(({ id, text, photoURL, uid }) => (
+          <div
+            key={id}
+            className={
+              "msg ${uid === auth.currentUser.uid ? 'sent' : 'received'}"
+            }
+          >
+            <img src={photoURL} />
+            <p>{text}</p>
+          </div>
+        ))}
+      </div>
       <SendMessage />
     </div>
   );
