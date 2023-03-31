@@ -9,5 +9,4 @@ function App() {
   return <>{user ? <Chat /> : <SignIn />}</>;
 }
 
-//tese
 export default App;
