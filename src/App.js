@@ -9,6 +9,4 @@ function App() {
   return <>{user ? <Chat /> : <SignIn />}</>;
 }
 
-// teoo
-// teoo
 export default App;
